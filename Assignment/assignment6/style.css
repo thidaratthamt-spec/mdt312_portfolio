@@ -1,0 +1,124 @@
+/* =========================================
+   ASSIGNMENT 6: STYLES FOR ORIGINAL HTML
+   (MINIMAL CLEAN & POLITE THEME)
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F4F5F7; /* สีพื้นหลังสว่างนวล สุภาพ */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2F3640; /* ข้อความสีเทากราไฟต์เข้ม อ่านง่าย */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ฟอร์มตรงกลาง */
+form {
+    width: 100%;
+    max-width: 460px;
+}
+
+fieldset {
+    background-color: #ffffff;
+    border: 2px solid #2C3E50; /* ขอบสีกรมท่าเข้มสุภาพ */
+    border-radius: 16px;
+    padding: 25px 30px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* เงาฟุ้งแบบมินิมอล */
+    font-weight: 600;
+    line-height: 2.2;
+}
+
+legend {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2C3E50;
+    background-color: #ffffff;
+    padding: 2px 16px;
+    border: 2px solid #2C3E50;
+    border-radius: 12px;
+}
+
+/* ช่องกรอกข้อมูล */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"] {
+    padding: 8px 12px;
+    border: 1.5px solid #BDC3C7; /* ขอบเทาอ่อนเรียบหรู */
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 8px;
+    margin-top: 4px;
+    transition: all 0.2s ease;
+    background-color: #FAFAFA;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus {
+    border-color: #2C3E50;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+}
+
+/* ตัวเลือก Radio */
+input[type="radio"] {
+    margin-left: 10px;
+    margin-right: 4px;
+    accent-color: #2C3E50;
+}
+
+/* ตัวหนังสือเตือนความผิดพลาด */
+#errormsg {
+    color: #D32F2F;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ปุ่มกด Submit & Reset */
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 8px;
+    transition: all 0.2s ease;
+}
+
+/* ปุ่ม Submit (Login / Register) */
+input[type="submit"] {
+    background-color: #2C3E50;
+    color: #ffffff;
+    border: 2px solid #2C3E50;
+}
+
+input[type="submit"]:hover {
+    background-color: #1A252F;
+    border-color: #1A252F;
+}
+
+/* ปุ่ม Reset / Clear */
+input[type="reset"] {
+    background-color: #ffffff;
+    color: #7F8C8D;
+    border: 2px solid #BDC3C7;
+}
+
+input[type="reset"]:hover {
+    background-color: #F4F5F7;
+    color: #2C3E50;
+    border-color: #7F8C8D;
+}

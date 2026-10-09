@@ -1,0 +1,467 @@
+/* =========================================
+   1. GLOBAL STYLES & RESET
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ddf3ee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    padding-bottom: 50px;
+}
+
+/* =========================================
+   2. HEADER & NAVIGATION BAR
+   ========================================= */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.top-nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222222;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #3732D9;
+    font-size: 15px;
+    padding: 8px 20px;
+    border: 1px solid #333333;
+    border-radius: 20px;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.navbar a.active, .navbar a:hover {
+    background-color: #FF69B3;
+    box-shadow: 2px 2px 1px #3732d96b;
+    font-weight: bold;
+}
+
+.nav-divider {
+    color: #888888;
+}
+
+/* =========================================
+   3. CONTAINER & CARD LAYOUT
+   ========================================= */
+.main-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1.5px solid #9E50BF;
+    border-radius: 16px;
+    padding: 25px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.card h2 {
+    font-size: 20px;
+    color: #3732D9;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   4. PROFILE SECTION (INDEX.HTML)
+   ========================================= */
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.profile-image img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 3px 3px 5px #a3a2a2;
+    background-color: #3732D9;
+}
+
+.profile-info .name-th {
+    font-size: 24px;
+    color: #3732D9;
+    margin-bottom: 4px;
+}
+
+
+.profile-info .education {
+    color: #444444;
+    margin-bottom: 12px;
+}
+
+.profile-info .contact a {
+    color: #FF69B3;
+    text-decoration: underline;
+}
+
+/* =========================================
+   5. BADGES / CAPSULES
+   ========================================= */
+.badge-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 18px;
+    border: 1.5px solid #9E50BF;
+    border-radius: 20px;
+    font-size: 13px;
+    background-color: #CCF281;
+    color: #3732D9;
+}
+
+/* =========================================
+   6. SKILLS TABLE
+   ========================================= */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border: 2px solid #9E50BF;
+    overflow: hidden;
+}
+
+.skills-table th {
+    background-color: #b883ce;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    width: 50%;
+}
+
+.skills-table td {
+    padding: 15px;
+    vertical-align: top;
+    border: 1px solid #DDF2AE;
+    background-color: #ffffff;
+}
+
+.skills-table ul {
+    padding-left: 20px;
+}
+
+.skills-table li {
+    margin-bottom: 6px;
+    color: #222222;
+}
+
+/* =========================================
+   7. ASSIGNMENTS GRID (INDEX.HTML)
+   ========================================= */
+.assignment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.assignment-card {
+    border: 2px solid #3732D9;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px #a3a2a2;
+}
+
+.assignment-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #ab0764;
+}
+
+.assignment-card p {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.btn-link {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid #494954;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #333333;
+    font-size: 12px;
+    align-self: flex-end;
+    transition: background-color 0.2s;
+}
+
+.btn-link:hover {
+    background-color: #FF69B3;
+    border-color: #FF69B3;
+}
+
+.reference-card p {
+    color: #666666;
+    font-size: 14px;
+}
+
+/* =========================================
+   8. PROJECTS LAYOUTS (PROJECT.HTML)
+   ========================================= */
+.project-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444444;
+    margin-bottom: 18px;
+}
+
+/* --- Sweetscoop: Layout ภาพใหญ่ + 5 ภาพย่อย --- */
+.sweetscoop-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.sweetscoop-gallery .main-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 1px solid #9E50BF;
+}
+
+.sweetscoop-gallery .sub-imgs {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+}
+
+.sweetscoop-gallery .sub-imgs img {
+    flex: 1;
+    width: 0;
+    aspect-ratio: 9 / 16; 
+    object-fit: contain; 
+    border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #dddddd;
+}
+
+/* --- Balance Board: ภาพตรงกลาง --- */
+.single-center-img {
+    display: flex;
+    justify-content: center;
+}
+
+.single-center-img img {
+    width: 60%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #dddddd;
+}
+
+/* --- QUEUEEE: 2 คอลัมน์ --- */
+.two-cols-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.two-cols-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #dddddd;
+}
+
+.ref-link-box {
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.ref-link-box a {
+    color: #FF69B3;
+    word-break: break-all;
+}
+
+/* =========================================
+   9. 3D SKILLS SECTION
+   ========================================= */
+.sub-card {
+    border: 1.5px solid #9E50BF;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 18px;
+    background-color: #fafafa;
+}
+
+.inner-box {
+    border: 1.5px solid #DDF2AE;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+.inner-box h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #3732D9;
+}
+
+.sub-text {
+    font-size: 12px;
+    color: #777777;
+    margin-top: -6px;
+    margin-bottom: 12px;
+}
+
+/* Maya Grid */
+.maya-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.maya-model-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.maya-model-layout .tall-img {
+    width: 100%;
+    height: 188px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.maya-model-layout .stack-imgs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.maya-model-layout .stack-imgs img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.maya-room-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.maya-room-layout img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* ZBrush Grid */
+.zbrush-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.zbrush-grid img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #dddddd;
+}
+
+/* =========================================
+   10. RESPONSIVE DESIGN (สำหรับจอมือถือ)
+   ========================================= */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 0 10px;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .assignment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sweetscoop-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .sweetscoop-gallery .sub-imgs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .maya-grid, .two-cols-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .single-center-img img {
+        width: 100%;
+    }
+
+
+    /* 1. จัด Header ให้กระชับขึ้นบนมือถือ */
+    .top-nav {
+        padding: 0 15px;
+        gap: 10px;
+    }
+
+    /* 2. ลดขนาดข้อความ Logo */
+    .top-nav .logo {
+        font-size: 20px;
+    }
+
+    /* 3. ลดระยะขอบปุ่ม (Padding) และขนาดฟอนต์ของเมนู */
+    .navbar {
+        gap: 6px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+        padding: 6px 12px; /* ลด Padding จาก 8px 20px เหลือ 6px 12px */
+        white-space: nowrap; /* ป้องกันไม่ให้ข้อความตกบรรทัด */
+    }
+}

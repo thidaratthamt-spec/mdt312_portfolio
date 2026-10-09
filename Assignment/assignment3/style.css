@@ -1,0 +1,256 @@
+body {
+  background-image: url('pic/Clot\ Red.jpg');
+  margin: 30px; /* เว้นระยะขอบข้างนอกเท่ากัน 4 ด้าน*/
+  padding: 10px ; 
+}
+
+.main-container {
+    margin:  auto;
+    background-color: #fffefc;
+    padding: 0;
+    border-radius: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.main-header {
+  width: 100%;
+  background-color: #490404; /* กำหนดสีพื้นหลังส่วนหัว */
+  border-radius: 40px;
+}
+/* ชื่อ,จัดชื่อให้ตรงกลาง */
+.header-title {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.header-title h1 {
+  font-size: 2rem;
+  font-family: cursive;
+  letter-spacing: 2px;
+  color: #fff4f4; /* ปรับสีตัวอักษรตรง head บนสุด */
+}
+
+/* รูปภาพใหญ่ด้านบน */
+/* 1. สั่งให้ตัวครอบใหญ่จัดรูปเรียงแนวนอน (Flexbox) */
+.cinnamon_imgfour {
+  display: flex; /* ใช้เรียงภาพต่อกันในภาพใหญ่ 50 50 พอดี*/
+  width: 100%; /* แคบกว้างของภาพใหญ่ */
+  
+}
+
+/* 2. ปรับให้รูปทั้งสองใบ (.cinnamon-4 และ .cinnamon-3) แบ่งครึ่งเท่ากัน */
+.cinnamon_imgfour img {
+  width: 50%;          /* แบ่งคนละ 50% ให้กว้างเท่ากันเป๊ะ */
+  height: 450px;       /* ความสูงเท่ากัน */
+  object-fit: cover;   /* ตัดส่วนเกินอัตโนมัติ ภาพไม่เบี้ยว */
+  object-position: center top; 
+  border-bottom: 5px solid #541a1a;
+  
+}
+
+/* หัวข้อวัตถุดิบ */
+.Ingredients {
+  width: 200px; /* ความกว้างกล่อง ซ้าย ขวา*/
+  margin: 50px auto;
+  padding: 5px 30px;
+  color: rgb(91, 49, 20);
+  background-color: #fedbde;
+  border-radius: 40px;
+  border-bottom: 5px solid #541a1a;
+  text-align: center;
+  font-family: cursive;
+}
+
+/* รูปภาพของวัตถุดิบ */
+.cinnamon_imgOne {
+  width: 35%;             /* ปรับขนาดตาม % หน้าจอ (ย่อ-ขยายตามจอ) */
+  max-width: 400px;       /* ไม่ให้ภาพขยายใหญ่เกินไปบนจอคอม */
+  min-width: 150px;       /* ป้องกันไม่ให้ภาพเล็กเกินไปเวลาเปิดในมือถือ */
+  margin-left: 40px;         /* บังคับชิดซ้าย */
+
+  transition: all 0.3s ease; /* effect */
+}
+
+.cinnamon_imgOne:hover {
+  transform: translateY(-8px);               /* ขยับกล่องลอยขึ้นข้างบนเล็กน้อย */
+  box-shadow: 0 10px 20px rgba(139, 10, 10, 0.363); /* เพิ่มเงาด้านล่าง */
+}
+
+.cinnamon_imgOne img {
+  width: 100%;            /* ให้รูปย่อ-ขยายพอดีตามกล่อง cinnamon_imgOne */
+  height: auto;
+  border-radius: 15px;    /* ปรับมุมให้โค้งมนเล็กน้อย */
+  border-bottom: 5px solid #541a1a;
+  display: block;
+}
+
+/* ลิสวัตถุดิบ */
+.ingredients-container {
+  display: flex;          /* ถูกใช้จัดวางรูปให้ขนานไว้ทางซ้าย และข้อความไว้ทางขวา เรียงกันเป็นแนวนอน*/
+  align-items: flex-start; /* จัดให้ขอบบนตรงกัน */
+  gap: 30px;              /* ระยะห่างระหว่างรูปกับข้อความ */
+  margin: 20px 40px;      /* เว้นขอบรอบๆ */
+  font-family: cursive;
+  font-weight: lighter;
+  color: #541a1a;
+}
+
+/* ปรับให้ส่วนข้อความขยายพื้นที่ที่เหลือ */
+.IngredientsList {
+  flex: 1;                /* ให้ข้อความกินพื้นที่ส่วนที่เหลือทางขวา */
+}
+
+/* วงกลมสามอัน */
+.cinnamon_imgcircle {
+  display: flex ;
+  flex-wrap: wrap;
+  justify-content: center; /* จัดให้อยู่ตรงกลางกล่อง */
+  align-items: center;
+  gap: 30px;               /* ระยะห่างระหว่างวงกลม */
+  margin: 30px 0;
+}
+
+.cinnamon_imgcircle img {
+  width: 180px;            /* กำหนดความกว้าง */
+  height: 180px;           /* กำหนดความสูงให้เท่ากับความกว้าง */
+  border-radius: 50%;      /* ตัดขอบให้เป็นวงกลมสมบูรณ์ */
+  object-fit: cover;       /* ครอปเฉพาะส่วนกลางภาพ ไม่ให้รูปเบี้ยว */
+  border: 4px solid #541a1a;/* ใส่เส้นขอบตัด */
+
+  transition: transform 0.3s ease;
+}
+
+.cinnamon_imgcircle img:hover {
+  transform: scale(1.08) rotate(5deg); /* rotate (หมุน) */
+  box-shadow: 0 10px 20px rgba(139, 10, 10, 0.363);
+}
+
+
+/* หัวข้อขั้นตอนการทำ */
+.StepByStepInstructions {
+  width: 400px; /* ความกว้างกล่อง ซ้าย ขวา*/
+  margin: 50px auto;
+  padding: 5px 30px;
+  color: rgb(91, 49, 20);
+  background-color: #fedbde;
+  border-radius: 40px;
+  border-bottom: 5px solid #541a1a;
+  text-align: center;
+  font-family: cursive;
+
+}
+
+/* step */
+.StepAll {
+  text-align: center; /* ช่วยจัดให้รูปทั้งหมดอยู่ตรงกลางหน้าจอ */
+}
+
+.div_display {
+  display: inline-block; /* บังคับให้ div มาเรียงต่อกันแนวนอน */
+  width: 30%;            /* กำหนดขนาด 30% เพื่อให้ 3 รูป พอดี 1 บรรทัด */
+  margin: 1%;            /* เว้นระยะห่างระหว่างรูป */
+  vertical-align: top;   /* จัดให้ขอบบนของทุกรูปเท่ากัน */
+
+  width: 300px; /* ขนาดกล่อง*/
+  padding: 20px 5px; /* ขอบบน ขอบข้าง*/
+  color: rgb(91, 49, 20);
+  background-color: #fffce0;
+  border-radius: 40px;
+  border-bottom: 5px solid #541a1a;
+  text-align: center;
+  font-family: cursive;
+
+  transition: all 0.3s ease; /* effect */
+}
+
+/* เพิ่มมาสำหรับ effect */
+.div_display:hover {
+  transform: translateY(-8px);               /* ขยับกล่องลอยขึ้นข้างบนเล็กน้อย */
+  box-shadow: 0 10px 20px rgba(14, 14, 14, 0.319); /* เพิ่มเงาด้านล่าง */
+  background-color: #f69e92;
+}
+
+.div_display img {
+  width: 60%;           /* กว้าง60 */
+  height: auto;  /* สูงตามสัดส่วนภาพ */
+}
+
+h2 {
+  font-family: cursive;
+  color: #541a1a;
+}
+
+/* contact */
+.contact {
+  color: aliceblue;
+  font-size: 12pt;
+  font-family: cursive;
+}
+a {
+  color: rgb(0, 229, 255);
+}
+/* =========================================
+   RESPONSIVE DESIGN FOR MOBILE SCREENS
+   ========================================= */
+@media (max-width: 768px) {
+    /* 1. ลดระยะขอบรอบนอก ให้แผ่นกระดาษสีขาวขยายเต็มจอมากขึ้น */
+    body {
+        margin: 10px;
+        padding: 0;
+    }
+
+    .main-container {
+        border-radius: 20px;
+        padding-bottom: 20px;
+    }
+
+    /* 2. ปรับความสูงรูปภาพใหญ่ด้านบนไม่ให้สูงเกินไป */
+    .cinnamon_imgfour img {
+        height: 220px;
+    }
+
+    /* 3. ปรับให้รูปวัตถุดิบและรายการวัตถุดิบสลับมาเรียงแนวตั้ง */
+    .ingredients-container {
+        flex-direction: column; /* เปลี่ยนจากเรียงซ้าย-ขวา มาเรียงบน-ล่าง */
+        align-items: center;
+        margin: 15px 20px;
+        gap: 15px;
+    }
+
+    .cinnamon_imgOne {
+        width: 80%;
+        max-width: 250px;
+        margin-left: 0; /* ยกเลิก margin ชิดซ้ายเดิม */
+    }
+
+    .IngredientsList {
+        width: 100%;
+    }
+
+    .IngredientsList h2 {
+        font-size: 1rem; /* ย่อขนาดฟอนต์หัวข้อรายการลงเล็กน้อย */
+    }
+
+    /* 4. ปรับขนาดปุ่มหัวข้อไม่ให้ล้นขอบกระดาษขาว */
+    .Ingredients, .StepByStepInstructions {
+        width: 85%;
+        max-width: 320px;
+        margin: 30px auto;
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    /* 5. ปรับการ์ดขั้นตอนการทำ (StepAll) ให้เต็มความกว้าง */
+    .div_display {
+        width: 90%;
+        max-width: 320px;
+        margin: 10px auto;
+        display: block; /* บังคับลงมาเรียงต่อกันเป็นแถวเดียวเดี่ยวๆ */
+    }
+
+    /* 6. ย่อขนาดวงกลม 3 อันลงมาเล็กน้อย */
+    .cinnamon_imgcircle img {
+        width: 120px;
+        height: 120px;
+    }
+}

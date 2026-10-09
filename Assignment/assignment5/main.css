@@ -1,0 +1,167 @@
+/* =========================================
+   ASSIGNMENT 5: BLOGGER / FORUM STYLES 
+   (PASTEL PINK & PASTEL BLUE)
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFD1DC; /* พื้นหลังชมพูนมพาสเทล */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1A103C;
+    padding: 40px 15px;
+    display: block;
+}
+
+/* คอนเทนเนอร์ตรงกลาง เรียงจากบนลงล่าง */
+.forum-container {
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* หัวข้อหลัก */
+h1#top {
+    font-size: 32px;
+    color: #598DD6; /* ฟ้าพาสเทลเข้ม */
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 800;
+    text-shadow: 2px 2px 0px #ffffff;
+}
+
+/* ซ่อนเส้น hr เดิม */
+hr {
+    display: none;
+}
+
+/* กล่องแสดงผลโพสต์ (Topic, Reply 1, Reply 2) */
+#topic, #reply1, #reply2 {
+    background-color: #ffffff;
+    border: 3.5px solid #fdff99; /* ขอบสีฟ้าพาสเทล */
+    border-radius: 18px;
+    padding: 16px 20px;
+    min-height: 65px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222222;
+    word-break: break-word;
+    width: 100%;
+}
+
+/* ป้ายบอกประเภทข้อความ */
+#topic:not(:empty)::before {
+    display: block;
+    font-size: 13px;
+    font-weight: 800;
+    color: #FF69B3;
+    margin-bottom: 6px;
+}
+
+#reply1:not(:empty)::before {
+    display: block;
+    font-size: 13px;
+    font-weight: 800;
+    color: #598DD6;
+    margin-bottom: 6px;
+}
+
+#reply2:not(:empty)::before {
+    display: block;
+    font-size: 13px;
+    font-weight: 800;
+    color: #598DD6;
+    margin-bottom: 6px;
+}
+
+/* ช่องพิมพ์ข้อความ (Textarea) */
+textarea#message {
+    width: 100%;
+    height: 110px;
+    background-color: #ffffff;
+    border: 3.5px solid #598DD6;
+    border-radius: 18px;
+    padding: 15px;
+    font-size: 15px;
+    font-family: inherit;
+    color: #222222;
+    margin-top: 10px;
+    resize: vertical;
+    outline: none;
+    box-shadow: 5px 5px 0px #FF69B3;
+}
+
+textarea#message:focus {
+    border-color: #FF69B3;
+    box-shadow: 5px 5px 0px #598DD6;
+}
+
+/* กลุ่มปุ่มกดให้อยู่แถวเดียวกัน */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+/* ปุ่ม Post & Clear */
+button {
+    font-size: 16px;
+    font-weight: 800;
+    padding: 12px 28px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* ปุ่ม Post */
+#post-btn {
+    background-color: #598DD6;
+    color: #ffffff;
+    border: 3px solid #598DD6;
+    box-shadow: 4px 4px 0px #FF69B3;
+}
+
+#post-btn:hover {
+    background-color: #FF69B3;
+    border-color: #FF69B3;
+    box-shadow: 4px 4px 0px #598DD6;
+}
+
+/* ปุ่ม Clear */
+#clear-btn {
+    background-color: #ffffff;
+    color: #598DD6;
+    border: 3px solid #598DD6;
+    box-shadow: 4px 4px 0px #598DD6;
+}
+
+#clear-btn:hover {
+    background-color: #fdff99;
+    color: #598DD6;
+}
+
+/* Responsive สำหรับจอมือถือ */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    h1#top {
+        font-size: 24px;
+    }
+
+    .button-group {
+        flex-direction: row;
+    }
+
+    button {
+        flex: 1;
+        padding: 12px 0;
+    }
+}
